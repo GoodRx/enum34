@@ -1,6 +1,8 @@
 import os
 import sys
+import setuptools
 from distutils.core import setup
+
 
 if sys.version_info[:2] < (2, 7):
     required = ['ordereddict']
@@ -48,7 +50,7 @@ the enumeration itself can be iterated over.
 '''
 
 setup( name='enum34',
-       version='1.1.1',
+       version='1.1.3',
        url='https://pypi.python.org/pypi/enum34',
        packages=['enum'],
        package_data={
