@@ -1,6 +1,6 @@
 exclude enum/*
 include setup.py
-inclued README
+include README
 include enum/__init__.py
 include enum/test_enum.py
 include enum/LICENSE
