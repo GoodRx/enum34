@@ -47,11 +47,13 @@ the enumeration itself can be iterated over.
 
     Fruit.banana.value
     # 2
+
+Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 '''
 
 setup( name='enum34',
        version='1.1.3',
-       url='https://pypi.python.org/pypi/enum34',
+       url='https://bitbucket.org/stoneleaf/enum34',
        packages=['enum'],
        package_data={
            'enum' : [
@@ -59,7 +61,7 @@ setup( name='enum34',
                'README',
                'doc/enum.rst',
                'doc/enum.pdf',
-               'test_enum.py',
+               'test.py',
                ]
            },
        license='BSD License',
