@@ -750,14 +750,6 @@ def __hash__(self):
 temp_enum_dict['__hash__'] = __hash__
 del __hash__
 
-def __bool__(self):
-    return bool(self._value_)
-if pyver < 3.0:
-    temp_enum_dict['__nonzero__'] = __bool__
-else:
-    temp_enum_dict['__bool__'] = __bool__
-    del __bool__
-
 def __reduce_ex__(self, proto):
     return self.__class__, (self._value_, )
 temp_enum_dict['__reduce_ex__'] = __reduce_ex__

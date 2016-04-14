@@ -335,13 +335,6 @@ class TestEnum(unittest.TestCase):
         self.assertRaises(ValueError, create_bad_class_1)
         self.assertRaises(ValueError, create_bad_class_2)
 
-    def test_bool(self):
-        class Logic(Enum):
-            true = True
-            false = False
-        self.assertTrue(Logic.true)
-        self.assertFalse(Logic.false)
-
     def test_contains(self):
         Season = self.Season
         self.assertTrue(Season.AUTUMN in Season)
