@@ -52,7 +52,7 @@ Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 '''
 
 setup( name='enum34',
-       version='1.1.3',
+       version='1.1.4',
        url='https://bitbucket.org/stoneleaf/enum34',
        packages=['enum'],
        package_data={
