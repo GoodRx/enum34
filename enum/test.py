@@ -6,6 +6,15 @@ from pickle import dumps, loads, PicklingError, HIGHEST_PROTOCOL
 
 pyver = float('%s.%s' % sys.version_info[:2])
 
+if pyver < 2.6:
+    from __builtin__ import enumerate as bltin_enumerate
+    def enumerate(thing, start=0):
+        result = []
+        for i, item in bltin_enumerate(thing):
+            i = i + start
+            result.append((i, item))
+        return result
+
 try:
     any
 except NameError:
@@ -442,7 +451,7 @@ class TestEnum(unittest.TestCase):
         self.assertEqual(dates[Season.AUTUMN], '1031')
 
     def test_enum_duplicates(self):
-        __order__ = "SPRING SUMMER AUTUMN WINTER"
+        _order_ = "SPRING SUMMER AUTUMN WINTER"
         class Season(Enum):
             SPRING = 1
             SUMMER = 2
@@ -684,7 +693,7 @@ class TestEnum(unittest.TestCase):
 
     def test_iteration_order(self):
         class Season(Enum):
-            __order__ = 'SUMMER WINTER AUTUMN SPRING'
+            _order_ = 'SUMMER WINTER AUTUMN SPRING'
             SUMMER = 2
             WINTER = 4
             AUTUMN = 3
@@ -1584,7 +1593,7 @@ class TestEnum(unittest.TestCase):
             def __int__(self):
                 return int(self._value_)
         class Color(AutoNumber2):
-            __order__ = 'red green blue'
+            _order_ = 'red green blue'
             red = ()
             green = ()
             blue = ()
@@ -1729,7 +1738,7 @@ class TestEnum(unittest.TestCase):
                 obj._value_ = value
                 return obj
         class ColorInAList(AutoNumberInAList):
-            __order__ = 'red green blue'
+            _order_ = 'red green blue'
             red = ()
             green = ()
             blue = ()
@@ -1789,7 +1798,7 @@ class TestUnique(unittest.TestCase):
 
         try:
             class Dirtier(IntEnum):
-                __order__ = 'single double triple turkey'
+                _order_ = 'single double triple turkey'
                 single = 1
                 double = 1
                 triple = 3

@@ -51,27 +51,28 @@ the enumeration itself can be iterated over.
 Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 '''
 
-setup( name='enum34',
-       version='1.1.4',
-       url='https://bitbucket.org/stoneleaf/enum34',
-       packages=['enum'],
-       package_data={
-           'enum' : [
-               'LICENSE',
-               'README',
-               'doc/enum.rst',
-               'doc/enum.pdf',
-               'test.py',
-               ]
-           },
-       license='BSD License',
-       description='Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4',
-       long_description=long_desc,
-       provides=['enum'],
-       install_requires=required,
-       author='Ethan Furman',
-       author_email='ethan@stoneleaf.us',
-       classifiers=[
+data = dict(
+        name='enum34',
+        version='1.1.4',
+        url='https://bitbucket.org/stoneleaf/enum34',
+        packages=['enum'],
+        package_data={
+            'enum' : [
+                'LICENSE',
+                'README',
+                'doc/enum.rst',
+                'doc/enum.pdf',
+                'test.py',
+                ]
+            },
+        license='BSD License',
+        description='Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4',
+        long_description=long_desc,
+        provides=['enum'],
+        install_requires=required,
+        author='Ethan Furman',
+        author_email='ethan@stoneleaf.us',
+        classifiers=[
             'Development Status :: 5 - Production/Stable',
             'Intended Audience :: Developers',
             'License :: OSI Approved :: BSD License',
@@ -81,6 +82,11 @@ setup( name='enum34',
             'Programming Language :: Python :: 2.5',
             'Programming Language :: Python :: 2.6',
             'Programming Language :: Python :: 2.7',
-            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.3',
+            'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
             ],
-    )
+        )
+
+if __name__ == '__main__':
+    setup(**data)
