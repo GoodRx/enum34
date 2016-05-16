@@ -60,7 +60,7 @@ make = [
 
 data = dict(
         name='enum34',
-        version='1.1.5',
+        version='1.1.6',
         url='https://bitbucket.org/stoneleaf/enum34',
         packages=['enum'],
         package_data={
