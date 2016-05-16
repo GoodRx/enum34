@@ -1,10 +1,11 @@
-import enum
+from pickle import dumps, loads, PicklingError, HIGHEST_PROTOCOL
 import sys
 import unittest
-from enum import Enum, IntEnum, unique, EnumMeta
-from pickle import dumps, loads, PicklingError, HIGHEST_PROTOCOL
-
 pyver = float('%s.%s' % sys.version_info[:2])
+if pyver < 2.5:
+    sys.path.insert(0, '.')
+import enum
+from enum import Enum, IntEnum, unique, EnumMeta
 
 if pyver < 2.6:
     from __builtin__ import enumerate as bltin_enumerate
