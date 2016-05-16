@@ -51,6 +51,10 @@ the enumeration itself can be iterated over.
 Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 '''
 
+py2_only = ()
+py3_only = ()
+make = []
+
 data = dict(
         name='enum34',
         version='1.1.5',
