@@ -53,7 +53,7 @@ Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 
 data = dict(
         name='enum34',
-        version='1.1.4',
+        version='1.1.5',
         url='https://bitbucket.org/stoneleaf/enum34',
         packages=['enum'],
         package_data={
