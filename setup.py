@@ -53,7 +53,10 @@ Repository and Issue Tracker at https://bitbucket.org/stoneleaf/enum34.
 
 py2_only = ()
 py3_only = ()
-make = []
+make = [
+        'rst2pdf enum/doc/enum.rst --output=enum/doc/enum.pdf',
+        ]
+
 
 data = dict(
         name='enum34',
